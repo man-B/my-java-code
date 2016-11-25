@@ -11,6 +11,9 @@ import javax.xml.ws.handler.soap.SOAPMessageContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/*
+ * This class is for logging of Request, Response and fault for SOAP services
+ */
 public class LoggingHandler implements SOAPHandler<SOAPMessageContext> {
 
 	
