@@ -1,0 +1,39 @@
+<div>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3>Profile Details!</h3>
+        </div>
+         <div class="form-group" ng-class="{'has-error': rc.userForm.needsAttention(userForm.addressType)}">
+             
+         </div>
+        <div class="modal-body">
+	        <form>
+	        <label>Sex</label>
+	    		<div class="btn-group">
+			        <label class="btn btn-default" ng-model="profile.profileSex" uib-btn-radio="'Male'">Male</label>
+			        <label class="btn btn-default" ng-model="profile.profileSex" uib-btn-radio="'Female'">Female</label>
+			    </div>
+			    <br><br>
+	            <label>Name</label>
+	    		<input type="text" ng-model="profile.name" class="form-control">
+				<br>
+
+			    <label>Email</label>
+	    		<input type="text" ng-model="profile.email" class="form-control" type="email">
+			</form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+<profile-table></profile-table>
+    <!-- <div ng-repeat="profile in profiles">
+    	{{profile.name}}
+     	{{profile.email}}
+      	{{profile.profileSex}}
+    </div> -->
+<button type="button" class="btn btn-primary" ng-click="addProfile()">Add Profile</button>    
+</div>
+

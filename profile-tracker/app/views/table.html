@@ -1,0 +1,24 @@
+<table st-table="profiles1"  st-safe-src="profiles"  class="table table-bordered table-hover table-condensed" data-show-columns="true">
+<thead class="thead-inverse">
+<!-- <tr >
+	<th colspan="1"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+</tr> -->
+<tr>
+	<th st-sort="firstName">First Name</th>
+	<th st-sort="email">Email</th>
+	<th st-sort="sex">Sex</th>
+</tr>
+
+</thead>
+<tbody>
+<tr st-select-row="row" st-select-mode="multiple" ng-repeat="profile in profiles1">
+	<td>{{profile.name | uppercase}}</td>
+	<td>{{profile.email}}</td>
+	<td>{{profile.profileSex}}</td>	
+</tr>
+<tr ng-show="profiles.length ==0">
+	<td colspan="3">No profile is added</td>
+</tr>
+</tbody>
+</table>
+<button ng-click="reverseName()" class="btn btn-default">Click</button>{{name}}
